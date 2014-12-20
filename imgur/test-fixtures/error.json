@@ -1,0 +1,9 @@
+{
+    "data": {
+        "error": "This method requires authentication",
+        "request": "\/3\/account.json",
+        "method": "GET",
+    },
+    "success": false,
+    "status": 403
+}
