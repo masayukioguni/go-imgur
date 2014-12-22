@@ -8,7 +8,8 @@ type GalleryService struct {
 }
 
 type Image struct {
-	ID string `json:"id,omitempty"`
+	ID   string `json:"id,omitempty"`
+	Link string `json:"link,omitempty"`
 }
 
 type Gallery struct {
