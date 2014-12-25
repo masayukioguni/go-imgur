@@ -1,11 +1,9 @@
-# go-digitalocean
+# go-imgur
 
-go-digitalocean is a Go client library for accessing the [DigitalOcean API](https://developers.digitalocean.com/).
+go-imgur is a Go client library for accessing the [imgur API](https://api.imgur.com/).
 
-go-digitalocean was heavily inspired by the go-github library.
+go-imgur was heavily inspired by the go-github library.
 
-**travis-ci:** [![Build Status](https://travis-ci.org/masayukioguni/go-digitalocean.svg?branch=master)](https://travis-ci.org/masayukioguni/go-digitalocean)
+**travis-ci:** [![Build Status](https://travis-ci.org/masayukioguni/go-imgur.svg?branch=master)](https://travis-ci.org/masayukioguni/go-imgur)
 
-**drone.io:** [![Build Status](https://drone.io/github.com/masayukioguni/go-digitalocean/status.png)](https://drone.io/github.com/masayukioguni/go-digitalocean/latest) 
-
-**Test Coverage:** [![Coverage Status](https://coveralls.io/repos/masayukioguni/go-digitalocean/badge.png?branch=master)](https://coveralls.io/r/masayukioguni/go-digitalocean?branch=master)([gocov report](https://drone.io/github.com/masayukioguni/go-digitalocean/files/coverage.html))
+**drone.io:** [![Build Status](https://drone.io/github.com/masayukioguni/go-imgur/status.png)](https://drone.io/github.com/masayukioguni/go-imgur/latest) 
