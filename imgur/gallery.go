@@ -4,14 +4,9 @@ import (
 	"net/http"
 )
 
-// AccountService Digital Ocean API docs: https://developers.digitalocean.com/#account
+// GalleryService Imgur API
 type GalleryService struct {
 	client *Client
-}
-
-type Image struct {
-	ID   string `json:"id,omitempty"`
-	Link string `json:"link,omitempty"`
 }
 
 type GalleryAlbumResponse struct {

@@ -22,6 +22,19 @@ func Account(client *imgur.Client) {
 
 }
 
+func Album(client *imgur.Client) {
+
+	data, _, err := client.AlbumService.GetAlbum("lDRB2")
+
+	if err != nil {
+		fmt.Printf("error: %v\n\n", err)
+		return
+	}
+
+	fmt.Printf("%v\n", data)
+
+}
+
 func main() {
 	id := os.Getenv("IMGUR_API_CLIENT_ID")
 	client, _ := imgur.NewClient(&imgur.Option{ClientID: id})
@@ -36,5 +49,6 @@ func main() {
 	fmt.Printf("%v\n", data)
 
 	Account(client)
+	Album(client)
 
 }

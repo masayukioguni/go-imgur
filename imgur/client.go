@@ -31,6 +31,7 @@ type Client struct {
 
 	GalleryService *GalleryService
 	AccountService *AccountService
+	AlbumService   *AlbumService
 }
 
 // An Response by API request.
@@ -68,6 +69,7 @@ func NewClient(option *Option) (*Client, error) {
 	c := &Client{client: httpClient, BaseURL: baseURL, UserAgent: userAgent, Option: option}
 	c.GalleryService = &GalleryService{client: c}
 	c.AccountService = &AccountService{client: c}
+	c.AlbumService = &AlbumService{client: c}
 
 	return c, nil
 }
