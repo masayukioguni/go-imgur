@@ -1,6 +1,8 @@
 package imgur
 
-import ()
+import (
+	"net/http"
+)
 
 // AccountService Digital Ocean API docs: https://developers.digitalocean.com/#account
 type GalleryService struct {
@@ -8,11 +10,8 @@ type GalleryService struct {
 }
 
 type Image struct {
-	ID string `json:"id,omitempty"`
-}
-
-type Gallery struct {
-	Images []Image `json:"images,omitempty"`
+	ID   string `json:"id,omitempty"`
+	Link string `json:"link,omitempty"`
 }
 
 type GalleryAlbumResponse struct {
@@ -21,19 +20,19 @@ type GalleryAlbumResponse struct {
 	Data    []Image `json:"data,omitempty"`
 }
 
-func (s *GalleryService) GetAlbum() (*[]Image, error) {
+func (s *GalleryService) GetAlbum() ([]Image, *http.Response, error) {
 	u := "/3/gallery"
 
 	req, err := s.client.NewRequest("GET", u, nil)
 	if err != nil {
-		return nil, err
+		return nil, nil, err
 	}
 
 	gar := new(GalleryAlbumResponse)
-	_, err = s.client.Do(req, gar)
+	resp, err := s.client.Do(req, gar)
 	if err != nil {
-		return nil, err
+		return nil, resp, err
 	}
 
-	return &gar.Data, err
+	return gar.Data, resp, err
 }
