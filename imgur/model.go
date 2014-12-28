@@ -15,3 +15,10 @@ type Album struct {
 type Gallery struct {
 	Images []Image `json:"images,omitempty"`
 }
+
+type Tag struct {
+	Name       string  `json:"name,omitempty"`
+	Followers  int     `json:"followers,omitempty"`
+	TotalItems int     `json:"total_items,omitempty"`
+	Images     []Image `json:"items,omitempty"`
+}
