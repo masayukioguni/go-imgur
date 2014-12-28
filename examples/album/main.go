@@ -13,7 +13,7 @@ func main() {
 	id := os.Getenv("IMGUR_API_CLIENT_ID")
 	client, _ := imgur.NewClient(&imgur.Option{ClientID: id})
 
-	data, err := client.GalleryService.GetAlbum()
+	data, _, err := client.GalleryService.GetAlbum()
 
 	if err != nil {
 		fmt.Printf("error: %v\n\n", err)
